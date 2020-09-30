@@ -11,6 +11,7 @@ body {
   background-image: url(../img/bg.png);
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 800px;
   align-items: center;
 }
@@ -29,7 +30,7 @@ body {
   display: block;
   height: auto;
   background-color: rgba(255, 101, 140, 0.2);
-  padding: 20px 20px 100px 20px;
+  padding: 100px 20px;
 }
 .bg02 .circle-img-wrapper {
   display: block;
@@ -39,7 +40,7 @@ body {
   /*border: 10px solid black;*/
   background-size: cover;
   border-radius: 50%;
-  margin: 100px auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 .bg02 .text-box {
   width: 35%;
@@ -57,12 +58,13 @@ body {
   height: auto;
   overflow: hidden;
   background-color: #c2cdc5;
+  padding: 100px 20px;
 }
 .bg03 .overlap-container {
   display: block;
   padding: 60px;
   max-width: 1000px;
-  margin: 100px auto;
+  margin: 0 auto;
   position: relative;
   overflow: auto;
 }
@@ -90,7 +92,7 @@ body {
 }
 .bg04 {
   display: block;
-  padding: 0;
+  padding: 100px 20px;
 }
 .bg04 .flexible {
   display: flex;
@@ -100,15 +102,68 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 800px;
 }
 .bg04 .flexible li {
   flex-grow: 1;
-  border: 1px solid red;
   padding: 20px;
   text-align: center;
 }
 .bg04 .flexible li div {
   display: block;
+  min-height: 600px;
+}
+.bg04 .flexible li div img {
+  margin: 60px 0;
+}
+.bg05 {
+  display: block;
+  padding: 100px 20px;
+  background-color: rgba(167, 167, 167, 0.2);
+}
+.bg05 .flexible {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1030px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+.bg05 .flexible li {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+}
+.bg05 .flexible li img {
+  width: 100%;
+}
+.bg05 .flexible li div {
+  display: block;
   height: 400px;
+}
+.bg05 .flexible .title {
+  flex-grow: 1 100%;
+  width: 100%;
+}
+.bg05 .flexible .title h3 {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 3em;
+}
+.sticky-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.sticky-container main {
+  flex: auto;
+}
+.sticky-container footer {
+  flex-shrink: 0;
+}
+.sticky-container .page-footer {
+  background-color: #686868;
+}
+.sticky-container .page-footer .ribbon {
+  background-color: #424242;
+  color: #ffffff;
 }

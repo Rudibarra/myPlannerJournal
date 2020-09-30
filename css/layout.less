@@ -13,6 +13,8 @@ body{
         background-image: url(../img/bg.png);
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+
     
         min-height: 800px;
         align-items: center;
@@ -35,7 +37,7 @@ body{
     display: block;
     height: auto;
     background-color:rgba(255, 101, 140, 0.2);
-    padding: 20px 20px 100px 20px;
+    padding: 100px 20px;
 
 
     .circle-img-wrapper{
@@ -46,7 +48,7 @@ body{
         /*border: 10px solid black;*/
         background-size: cover;
         border-radius: 50%;
-        margin:100px auto 0 auto;
+        margin:0 auto 0 auto;
     }
 
     .text-box{
@@ -61,9 +63,6 @@ body{
             margin-bottom:10px;
         }
 
-        p{
-
-        }
     }
 }
 
@@ -72,11 +71,12 @@ body{
     height: auto;
     overflow: hidden;
     background-color: #c2cdc5 ;
+    padding: 100px 20px;
     .overlap-container{
         display: block;
         padding: 60px;
         max-width: 1000px;
-        margin: 100px auto;
+        margin: 0 auto;
         position: relative;
         overflow: auto;
 
@@ -111,7 +111,7 @@ body{
 .bg04{
     display: block;
     //border: 1px solid red;
-    padding: 0;
+    padding: 100px 20px;
 
     .flexible{
         display: flex;
@@ -122,13 +122,54 @@ body{
         list-style: none;
         margin: 0;
         padding: 0;
-        height: 800px;
 
         li{
+            
             flex-grow: 1;
-            border:1px solid red;
+            //border:1px solid green;
             padding: 20px;
             text-align: center;
+
+            div{
+                display: block;
+                min-height: 600px;
+                //background: orange;
+
+                img{
+                    margin: 60px 0;
+                }
+            }
+
+        }
+    }
+}
+
+.bg05{
+    display: block;
+    //border: 1px solid red;
+    padding: 100px 20px;
+    background-color: rgba(167, 167, 167, 0.2);
+
+    .flexible{
+        //border: 1px solid orange;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1030px;
+        margin: 0 auto;
+        //align-items: flex-start;
+        list-style: none;
+        padding: 0;
+        
+        li{
+            flex-grow: 1;
+            //border:1px solid red;
+            padding: 20px;
+            text-align:center;
+
+            img{
+                width: 100%;
+            }
 
             div{
                 display: block;
@@ -137,5 +178,39 @@ body{
             }
 
         }
+
+        .title{
+            flex-grow: 1 100%;
+            width: 100%;
+            h3{
+                font-family: 'Sansita Swashed', cursive;
+                font-size: 3em;
+            }
+        }
     }
+}
+
+
+.sticky-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex: auto;
+    }
+    
+    footer {
+        flex-shrink: 0;
+    }
+
+    .page-footer{
+        background-color: #686868;
+
+        .ribbon{
+            background-color: #424242;
+            color: #ffffff;
+        }
+    }
+    
 }
