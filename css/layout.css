@@ -88,3 +88,27 @@ body {
 .bg03 .overlap-container .img-wrapper img {
   width: 100%;
 }
+.bg04 {
+  display: block;
+  padding: 0;
+}
+.bg04 .flexible {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 800px;
+}
+.bg04 .flexible li {
+  flex-grow: 1;
+  border: 1px solid red;
+  padding: 20px;
+  text-align: center;
+}
+.bg04 .flexible li div {
+  display: block;
+  height: 400px;
+}
