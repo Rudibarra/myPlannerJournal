@@ -13,7 +13,6 @@ body {
   background-image: url(../img/bg.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-size: 100vmax 100vmax;
   background-attachment: fixed;
   min-height: 800px;
@@ -263,6 +262,34 @@ body {
     width: 70%;
   }
 }
+@media screen and (max-width: 800px) {
+  .bg01 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vmax 100vmax;
+    background-attachment: fixed;
+    min-height: 800px;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+    overflow: auto;
+  }
+  .bg01 h1 {
+    display: inline-block;
+    text-align: center;
+    padding: 50px 30px;
+    border: 4px solid black;
+    text-transform: uppercase;
+    font-size: 4em;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+}
 @media screen and (max-width: 640px) {
   .bg03 .overlap-container {
     width: 100%;
@@ -277,5 +304,23 @@ body {
   .bg03 .overlap-container .img-wrapper {
     max-width: 100%;
     float: left;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .bg01 {
+    background-image: url(../img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+  .bg01 h1 {
+    display: inline-block;
+    text-align: center;
+    padding: 50px 30px;
+    border: 4px solid black;
+    text-transform: uppercase;
+    font-size: 4em;
+    line-height: 1.5;
+    font-weight: bold;
   }
 }
