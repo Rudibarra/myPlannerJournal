@@ -142,9 +142,6 @@ body {
   padding: 20px;
   text-align: center;
 }
-.bg05 .flexible li img {
-  width: 100%;
-}
 .bg05 .flexible li div {
   display: block;
   height: 400px;
@@ -156,6 +153,31 @@ body {
 .bg05 .flexible .title h3 {
   font-family: 'Sansita Swashed', cursive;
   font-size: 3em;
+}
+.bg06 {
+  display: block;
+  padding: 100px 20px;
+  background-color: #acacac;
+}
+.bg06 form {
+  display: block;
+  max-width: 500px;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+}
+.bg06 form label {
+  display: block;
+  margin-bottom: 15px;
+}
+.bg06 form .fw {
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: #212529;
+  border-color: #212529;
 }
 .sticky-container {
   height: 100vh;
@@ -170,11 +192,18 @@ body {
   flex-shrink: 0;
 }
 .sticky-container .page-footer {
-  background-color: #686868;
+  background-color: #eeeeee;
 }
 .sticky-container .page-footer .ribbon {
   background-color: #424242;
   color: #ffffff;
+}
+.sticky-container .page-footer p a {
+  color: #212529;
+  text-decoration: underline;
+}
+.sticky-container .page-footer p :hover {
+  color: #212529;
 }
 @media screen and (max-width: 1199px) {
   .bg02 .text-box {
