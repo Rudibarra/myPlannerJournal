@@ -205,6 +205,7 @@ body {
 }
 .sticky-container main {
   flex: auto;
+  width: 100%;
 }
 .sticky-container footer {
   flex-shrink: 0;
