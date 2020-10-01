@@ -8,17 +8,16 @@ body{
 }
 
 .bg01{
-    display:block;
-    background-image: url(../img/bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    display:flex;
+    background-image:url(../img/bg.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
     min-height: 800px;
     text-align: center;
     padding: 0 20px;
     width: 100%;
     overflow: auto;
-    box-sizing: border-box;
     
 
 
@@ -362,6 +361,14 @@ body{
         }
     }
 }
+@media screen and (max-width: 760px) {
+    .bg01{
+        h1{
+            font-size: 3.5em;
+        }
+    }
+}
+
 
 @media screen and (max-width: 640px) {
     .bg03{
