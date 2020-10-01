@@ -172,18 +172,24 @@
                     <label>
                         <label>Name:</label>
                         <input id="name" type="text" name="name" class="form-control" >
-                        <div id="error" class="alert alert-warning" style="display: none;"></div>
+                        <div id="error" class="alert alert-warning" style="display: none;">
+                            A name is required
+                        </div>
                     </label>
                     <label>
                         <label>Email:</label>
                         <input id="email" type="text" name="_replyto" class="form-control" >
-                        <div id="error2" class="alert alert-warning" style="display: none;"></div>
+                        <div id="error2" class="alert alert-warning" style="display: none;">
+                            An email is required
+                        </div>
 
                     </label>
                     <label>
                         Message:
                         <textarea id="messages01" name="message" class="form-control" style="resize: none;"></textarea>
-                        <div id="error3" class="alert alert-warning" style="display: none;"></div>
+                        <div id="error3" class="alert alert-warning" style="display: none;">
+                            A message is required
+                        </div>
 
                     </label>
 
@@ -353,17 +359,14 @@
             let message = []
             if(name.value === '' || name.value == null){
                 errorElement.style.display = "block";
-                message.push('Name is required')
             }
 
             if(email.value === '' || email.value == null){
                 errorElement2.style.display = "block";
-                message.push('email is required')
             }
 
             if(messages01.value === '' || messages01.value == null){
                 errorElement3.style.display = "block";
-                message.push('A message is required')
             }
 
             if(message.length>0){
