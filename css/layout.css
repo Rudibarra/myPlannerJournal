@@ -176,3 +176,53 @@ body {
   background-color: #424242;
   color: #ffffff;
 }
+@media screen and (max-width: 1199px) {
+  .bg02 .text-box {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .bg02 .text-box {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 820px) {
+  .bg03 .overlap-container {
+    width: 600px;
+  }
+  .bg03 .overlap-container .text-box {
+    padding: 25px;
+    width: 380px;
+    margin-top: 12%;
+  }
+  .bg03 .overlap-container .img-wrapper {
+    max-width: 450px;
+  }
+  .bg04 .flexible {
+    flex-direction: column;
+  }
+  .bg04 .flexible li {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  .bg04 .flexible li div img {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .bg03 .overlap-container {
+    width: 100%;
+  }
+  .bg03 .overlap-container .text-box {
+    padding: 25px;
+    width: 100%;
+    margin-top: 0;
+    float: left;
+    position: relative;
+  }
+  .bg03 .overlap-container .img-wrapper {
+    max-width: 100%;
+    float: left;
+  }
+}
