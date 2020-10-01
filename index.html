@@ -171,14 +171,14 @@
                 <form id="form" action="https://formspree.io/f/xvovgloq" method="POST">
                     <label>
                         <label>Name:</label>
-                        <input id="name" type="text" name="name" class="form-control" >
+                        <input id="name" type="text" name="name" class="form-control" onclick="erase()" >
                         <div id="error" class="alert alert-warning" style="display: none;">
                             A name is required
                         </div>
                     </label>
                     <label>
                         <label>Email:</label>
-                        <input id="email" type="text" name="_replyto" class="form-control" >
+                        <input id="email" type="text" name="_replyto" class="form-control" onclick="erase()" >
                         <div id="error2" class="alert alert-warning" style="display: none;">
                             An email is required
                         </div>
@@ -186,7 +186,7 @@
                     </label>
                     <label>
                         Message:
-                        <textarea id="messages01" name="message" class="form-control" style="resize: none;"></textarea>
+                        <textarea id="messages01" name="message" class="form-control" style="resize: none;" onclick="erase()"></textarea>
                         <div id="error3" class="alert alert-warning" style="display: none;">
                             A message is required
                         </div>
@@ -356,27 +356,37 @@
 
 
         form.addEventListener('submit', (e) =>{
-            let message = []
+     
             if(name.value === '' || name.value == null){
                 errorElement.style.display = "block";
+                e.preventDefault()
             }
 
             if(email.value === '' || email.value == null){
                 errorElement2.style.display = "block";
+                e.preventDefault()
             }
 
             if(messages01.value === '' || messages01.value == null){
                 errorElement3.style.display = "block";
-            }
-
-            if(message.length>0){
                 e.preventDefault()
-                errorElement.innerText = message
-                errorElement2.innerText = message
-                errorElement3.innerText = message
+            }
+        })
+
+       function erase(){
+            let element = event.srcElement.id
+            if(element === "name"){
+                document.getElementById('error').style.display = "none";
             }
 
-        })
+            if(element === "email"){
+                document.getElementById('error2').style.display = "none";
+            }
+
+            if(element === "messages01"){
+                document.getElementById('error3').style.display = "none";
+            }
+       }
     </script>
   </body>
 </html>

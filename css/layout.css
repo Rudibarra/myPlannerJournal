@@ -171,6 +171,9 @@ body {
   display: block;
   margin-bottom: 15px;
 }
+.bg06 form label label {
+  margin-bottom: 5px;
+}
 .bg06 form .fw {
   width: 100%;
   padding: 20px;
@@ -178,6 +181,21 @@ body {
   font-size: 1em;
   background-color: #212529;
   border-color: #212529;
+}
+.bg06 form .fw:active {
+  background-color: black !important;
+}
+.bg06 form .fw:focus {
+  background-color: black !important;
+  box-shadow: none !important;
+}
+.bg06 form .fw:hover {
+  background-color: black !important;
+}
+.bg06 form .alert {
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 0.9em;
 }
 .sticky-container {
   height: 100vh;
