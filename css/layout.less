@@ -183,9 +183,6 @@ body{
             padding: 20px;
             text-align:center;
 
-            img{
-                width: 100%;
-            }
 
             div{
                 display: block;
@@ -206,6 +203,39 @@ body{
     }
 }
 
+
+.bg06{
+    display: block;
+    //border: 1px solid red;
+    padding: 100px 20px;
+    background-color: rgb(172, 172, 172);
+
+    form{
+        display: block;
+        max-width: 500px;
+        //border:1px solid black;
+        border-radius: 5px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: white;
+
+        
+        label{
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .fw{
+            width: 100%;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1em;
+            background-color: #212529;
+            border-color: #212529;
+        }
+    }
+}
+
 //STICKY FOOTER
 .sticky-container{
     height: 100vh;
@@ -222,11 +252,22 @@ body{
     }
 
     .page-footer{
-        background-color: #686868;
+        background-color: #eeeeee;
 
         .ribbon{
             background-color: #424242;
             color: #ffffff;
+        }
+
+        p{
+            a{
+                color: #212529;
+                text-decoration: underline;
+            }
+
+            :hover{
+                color: #212529;
+            }
         }
     }
     

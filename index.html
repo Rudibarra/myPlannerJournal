@@ -32,24 +32,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -167,6 +164,33 @@
                     </li>
 
                 </ul>
+            </section>
+
+            <section class="bg06">
+
+                <form id="form" action="https://formspree.io/f/xvovgloq" method="POST">
+                    <label>
+                        <label>Name:</label>
+                        <input id="name" type="text" name="name" class="form-control" >
+                        <div id="error" class="alert alert-warning" style="display: none;"></div>
+                    </label>
+                    <label>
+                        <label>Email:</label>
+                        <input id="email" type="text" name="_replyto" class="form-control" >
+                        <div id="error2" class="alert alert-warning" style="display: none;"></div>
+
+                    </label>
+                    <label>
+                        Message:
+                        <textarea id="messages01" name="message" class="form-control" style="resize: none;"></textarea>
+                        <div id="error3" class="alert alert-warning" style="display: none;"></div>
+
+                    </label>
+
+                    <!-- your other form fields go here -->
+
+                    <button type="submit" class="btn btn-primary fw">Send</button>
+                </form>
             </section>
         </main>
         <footer class="page-footer">
@@ -303,7 +327,7 @@
         
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+                <p>MY PLANNER JOURNAL</p>
             </div>
             <!-- Copyright -->
         
@@ -313,5 +337,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+
+        const name = document.getElementById('name')
+        const email = document.getElementById('email')
+        const messages01 = document.getElementById('messages01')
+        const form = document.getElementById('form')
+        const errorElement = document.getElementById('error')
+        const errorElement2 = document.getElementById('error2')
+        const errorElement3 = document.getElementById('error3')
+
+
+
+        form.addEventListener('submit', (e) =>{
+            let message = []
+            if(name.value === '' || name.value == null){
+                errorElement.style.display = "block";
+                message.push('Name is required')
+            }
+
+            if(email.value === '' || email.value == null){
+                errorElement2.style.display = "block";
+                message.push('email is required')
+            }
+
+            if(messages01.value === '' || messages01.value == null){
+                errorElement3.style.display = "block";
+                message.push('A message is required')
+            }
+
+            if(message.length>0){
+                e.preventDefault()
+                errorElement.innerText = message
+                errorElement2.innerText = message
+                errorElement3.innerText = message
+            }
+
+        })
+    </script>
   </body>
 </html>
