@@ -170,6 +170,12 @@ body {
   padding: 40px;
   background-color: white;
 }
+.bg06 form h3 {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-align: center;
+}
 .bg06 form label {
   display: block;
   margin-bottom: 15px;
